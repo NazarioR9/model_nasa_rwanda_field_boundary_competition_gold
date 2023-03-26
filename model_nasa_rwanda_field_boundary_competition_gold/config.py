@@ -1,4 +1,5 @@
 import os
+import torch
 
 class CFG:
   month = ['2021_03', '2021_04', '2021_08', '2021_10', '2021_11', '2021_12']
@@ -14,7 +15,7 @@ class CFG:
   img_size = 768
   threshold = 0.6895833333333333
 
-  fp16 = True
+  fp16 = torch.cuda.is_available()
   workers = os.cpu_count()
 
   extra_params = {}

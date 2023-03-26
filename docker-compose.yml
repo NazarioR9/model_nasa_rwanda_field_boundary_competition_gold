@@ -1,7 +1,7 @@
 version: "3"
 services:
 
-  nasa-rwanda:
+  model_nasa_rwanda_field_boundary_competition_gold_v1:
     build:
       context: .
       dockerfile: Dockerfile
