@@ -77,7 +77,7 @@ def resize_batch(images, masks, size):
 
     return np.stack( resized_images ), np.stack( resized_masks )
 
-def load_model(fold, args, path='../checkpoints/'):
+def load_model(fold, args, path='checkpoints/'):
   model = get_model(args)
   model.load_state_dict(torch.load(f'{path}best_{fold}.pt'))
   model.eval()

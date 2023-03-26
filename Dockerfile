@@ -11,7 +11,7 @@ COPY requirements.txt /tmp/requirements-docker.txt
 
 ENV INPUT_DATA="./data/input"
 ENV OUTPUT_DATA="./data/output"
-ENV DATASET_ID = "nasa_rwanda_field_boundary_competition"
+ENV DATASET_ID="nasa_rwanda_field_boundary_competition"
 
 RUN pip install -r /tmp/requirements-docker.txt && \
     rm /tmp/requirements-docker.txt
