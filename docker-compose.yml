@@ -1,0 +1,10 @@
+version: "3"
+services:
+
+  nasa-rwanda:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nasa-rwanda
+    volumes:
+      - .:/app

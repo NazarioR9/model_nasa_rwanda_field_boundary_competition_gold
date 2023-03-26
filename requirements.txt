@@ -1,0 +1,7 @@
+pandas
+radiant-mlhub==0.4.1
+rasterio
+shapely
+accelerate==0.15.0
+albumentations==1.3.0
+git+https://github.com/qubvel/segmentation_models.pytorch.git@478b7d2d295cbd7787f4799c687fc18e82013829
