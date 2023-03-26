@@ -102,7 +102,7 @@ def predict(dataloader, model):
 
 def run_predict(fold, args, test_ids):
   ds = HarvestDataset(test_ids, args.month, args.img_size)
-  dl = DataLoader(ds, args.ebs, shuffle=False, num_workers=args.workers)
+  dl = DataLoader(ds, args.bs, shuffle=False, num_workers=args.workers)
 
   model = load_model(fold, args)
 

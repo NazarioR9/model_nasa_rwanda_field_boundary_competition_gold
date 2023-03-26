@@ -45,11 +45,10 @@ if __name__ == '__main__':
       pred_dict[tid].append( test_preds[idx] )
 
   # submission
-  best_thresold = 0.6895833333333333
   subs = []
   for i, tid in enumerate(tqdm(sorted(test_ids))):
       tid_preds = np.mean(pred_dict[tid], axis=0)
-      tid_preds = (tid_preds >= best_thresold).astype(int).astype('float32')[None]
+      tid_preds = (tid_preds >= args.threshold).astype(int).astype('float32')[None]
 
       if args.img_size != 256:
           _, tid_preds = resize_batch(tid_preds, tid_preds, 256)
@@ -62,4 +61,6 @@ if __name__ == '__main__':
 
       subs.append(ftd)
   subs = pd.concat(subs)
-  subs.to_csv(f'output.csv', index=False) ###-----------
+
+  output_path = os.environ['OUTPUT_DATA']
+  subs.to_csv(f'{output_path}/output.csv', index=False)

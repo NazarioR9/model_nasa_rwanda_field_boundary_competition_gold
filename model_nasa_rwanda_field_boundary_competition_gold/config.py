@@ -7,13 +7,12 @@ class CFG:
   arch = 'regnetz_040h'
   lr = 2e-3
   wd = 1e-6
-  epochs = 60
+  epochs = 20
   warmup = 0.
-  bs = 8
-  ebs = 16
+  bs = 4
 
   img_size = 768
-  threshold = 0.5
+  threshold = 0.6895833333333333
 
   fp16 = True
   workers = os.cpu_count()
