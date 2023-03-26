@@ -9,6 +9,8 @@ RUN apt-get update \
 
 COPY requirements.txt /tmp/requirements-docker.txt
 
+RUN mkdir -p data/input data/output
+
 ENV INPUT_DATA="./data/input"
 ENV OUTPUT_DATA="./data/output"
 ENV DATASET_ID="nasa_rwanda_field_boundary_competition"
