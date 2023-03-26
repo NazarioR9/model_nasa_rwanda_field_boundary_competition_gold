@@ -22,7 +22,7 @@ and other details in the [model documentation](/docs/index.md).
 ||Training|Inferencing|
 |---|-----------|--------|
 |RAM|25 GB RAM | 16 GB RAM|
-|NVIDIA GPU| A6000 | Optional (but very slow)|
+|NVIDIA GPU| A100 80GB | Optional (but very slow)|
 
 ## Get Started With Inferencing
 
