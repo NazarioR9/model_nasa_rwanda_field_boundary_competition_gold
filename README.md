@@ -57,15 +57,15 @@ docker build -t radiantearth/model_nasa_rwanda_field_boundary_competition_gold:1
 
     * The `data/` folder must contain:
         * `input/`: input folder containing the tile imagery.
-            This folder follows the following naming convention: 
-            `{dataset_id}_{tile_id}_{year}_{month}`. For example, for a dataset_id (`nasa_rwanda_field_boundary_competition`), a tile_id (`00`), a year (`2021`), we'll have the following structure:
+            This folder has the following naming convention: 
+            `{dataset_id}_{tile_id}_{year}_{month}`. For example, for a dataset_id (`nasa_rwanda_field_boundary_competition`), a tile_id (`00`) and a year (`2021`), we'll have the following structure:
             ```
-                nasa_rwanda_field_boundary_competition_source_test_00_2021_03
-                nasa_rwanda_field_boundary_competition_source_test_00_2021_04
-                nasa_rwanda_field_boundary_competition_source_test_00_2021_08
-                nasa_rwanda_field_boundary_competition_source_test_00_2021_10
-                nasa_rwanda_field_boundary_competition_source_test_00_2021_11
-                nasa_rwanda_field_boundary_competition_source_test_00_2021_12
+                nasa_rwanda_field_boundary_competition_source_test_00_2021_03/
+                nasa_rwanda_field_boundary_competition_source_test_00_2021_04/
+                nasa_rwanda_field_boundary_competition_source_test_00_2021_08/
+                nasa_rwanda_field_boundary_competition_source_test_00_2021_10/
+                nasa_rwanda_field_boundary_competition_source_test_00_2021_11/
+                nasa_rwanda_field_boundary_competition_source_test_00_2021_12/
             ```
             Notice that the months are fixed and have to be : ['2021_03', '2021_04', '2021_08', '2021_10', '2021_11', '2021_12'].
 
@@ -79,6 +79,7 @@ docker build -t radiantearth/model_nasa_rwanda_field_boundary_competition_gold:1
     # change paths to your actual input and output folders
     export INPUT_DATA="/home/my_user/model_nasa_rwanda_field_boundary_competition_gold/data/input/"
     export OUTPUT_DATA="/home/my_user/model_nasa_rwanda_field_boundary_competition_gold/data/output/"
+    export DATASET_ID="nasa_rwanda_field_boundary_competition"
     ```
 
 3. Run the appropriate Docker Compose command for your system

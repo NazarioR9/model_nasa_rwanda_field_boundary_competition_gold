@@ -26,7 +26,7 @@ Radiant MLHub. <https://doi.org/10.34911/rdnt.h28fju>
 
  [CC-BY-4.0](../LICENSE)
 
-## Creator{{s}}
+## Creators
 
 This solution was developped by:
 * [Muhamed Tuo](https://www.linkedin.com/in/muhamed-tuo-b1b3a0162/)
@@ -42,7 +42,7 @@ This solution was developped by:
 
 ## Model Architecture
 
-Our solution is a modified Unet++. An attention mechanism has been added between every interconnection of the encoder to the decoder (Meaning after each output layer of the encoder model). The encoder is a Regnet (more specifically `regnetv_040` available in the [Timm library](https://github.com/huggingface/pytorch-image-models)). 
+Our solution is a modified Unet++ with an attention mechanism between every interconnection of the encoder to the decoder (Meaning after each output layer of the encoder model). The encoder is a Regnet (more specifically `regnetv_040` available in the [Timm library](https://github.com/huggingface/pytorch-image-models)). 
 
 ## Training Operating System
 
@@ -55,7 +55,7 @@ this model for new inferencing.
 
 ### Training
 
-* Augmentaion
+* Augmentation
 
 The only augmentation we did was static. It is done before the training and saved into a new folder. We noticed that the model learned better with little (only Flip augmentation) to no augmentation during the training.
 
