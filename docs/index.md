@@ -53,7 +53,7 @@ The training was done on a Linux system with an Nvidia GPU (A100 80GB). An A600 
 Review the [GitHub repository README](../README.md) to get started running
 this model for new inferencing.
 
-### Training
+## Training
 
 * Augmentation
 
